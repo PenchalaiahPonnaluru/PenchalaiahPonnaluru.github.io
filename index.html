@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penchalaiah Ponnaluru | Physics Educator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --gray: #95a5a6;
+            --whatsapp: #25D366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            border-color: var(--whatsapp);
+        }
+        
+        .btn-whatsapp:hover {
+            background: transparent;
+            color: var(--whatsapp);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+        
+        /* Header with Profile Image */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(5px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .profile-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .nav-profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .nav-profile-img:hover {
+            transform: scale(1.1);
+            border-color: var(--accent);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .resume-download {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .resume-download:hover {
+            color: var(--primary);
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('physics-background.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        /* About Section with Circular Image */
+        .about {
+            background: white;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .about-img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+        
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        .skills {
+            margin-top: 30px;
+        }
+        
+        .skills h4 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: var(--light);
+            color: var(--secondary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Experience Section */
+        .experience {
+            background: var(--light);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            top: 30px;
+            transform: rotate(45deg);
+            box-shadow: 5px -5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -10px;
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .timeline-company {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .timeline-desc ul {
+            padding-left: 20px;
+        }
+        
+        .timeline-desc li {
+            margin-bottom: 8px;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            top: 20px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -20px;
+        }
+        
+        /* Education Section */
+        .education {
+            background: white;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .education-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .education-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+        }
+        
+        .education-degree {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .education-school {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .education-body {
+            padding: 20px;
+        }
+        
+        .education-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .education-desc p {
+            margin-bottom: 10px;
+        }
+        
+        /* Image Slideshow Section */
+        .slideshow {
+            background: var(--light);
+        }
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .dots-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+            background-color: var(--accent);
+        }
+        
+        /* WhatsApp Contact Section */
+        .whatsapp-contact {
+            background: var(--light);
+            text-align: center;
+        }
+        
+        .whatsapp-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-icon {
+            font-size: 3rem;
+            color: var(--whatsapp);
+            margin-bottom: 20px;
+        }
+        
+        .whatsapp-contact h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .whatsapp-contact p {
+            margin-bottom: 30px;
+            color: var(--text);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-img-container {
+                margin-bottom: 30px;
+            }
+            
+            .skills {
+                justify-content: center;
+            }
+            
+            .timeline::before {
+                left: 40px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-icon {
+                left: 20px !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+            
+            .slide img {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: white;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transition: all 0.3s;
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .nav-profile-img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .about-img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .slide img {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .slide img {
+                height: 250px;
+            }
+            
+            .slide-caption {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Profile Image -->
+    <header id="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="profile-nav">
+                    <!-- Replace "profile-thumbnail.jpg" with your actual thumbnail photo -->
+                    <img src="./assets/pechalaiah.jpg" alt="Penchalaiah Ponnaluru" class="nav-profile-img">
+                    <div class="logo">Penchalaiah Ponnaluru</div>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#slideshow">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li>
+                            <a href="./assets/Penchalaiah Ponnaluru exp.pdf" download class="resume-download">
+                                <i class="fas fa-download"></i> Resume
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transforming Physics Education Through Innovative Teaching</h1>
+                <p>Passionate Physics Junior Lecturer with 1.5+ years of experience creating engaging learning environments for CBSE/PUC students</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="./assets/Penchalaiah Ponnaluru exp.pdf" download class="btn btn-outline">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Circular Photo -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-img-container">
+                    <!-- Replace "profile.jpg" with your actual photo filename -->
+                    <img src="./assets/pechalaiah.jpg" alt="Penchalaiah Ponnaluru" class="about-img">
+                </div>
+                <div class="about-content">
+                    <h3>Dedicated Physics Educator</h3>
+                    <p>I am a passionate Junior Lecturer specializing in academic lab management, assessment preparation, and student engagement. Committed to creating dynamic learning environments that enhance student understanding of Physics concepts.</p>
+                    <p>My teaching philosophy emphasizes hands-on experimentation, real-world applications, and personalized mentorship to help students excel in CBSE and PUC +2 curricula.</p>
+                    
+                    <div class="skills">
+                        <h4>Teaching Expertise</h4>
+                        <div class="skill-tags">
+                            <div class="skill-tag"><i class="fas fa-chalkboard"></i> Curriculum Planning</div>
+                            <div class="skill-tag"><i class="fas fa-flask"></i> Lab Management</div>
+                            <div class="skill-tag"><i class="fas fa-check-circle"></i> Student Assessment</div>
+                            <div class="skill-tag"><i class="fas fa-users"></i> Interactive Lectures</div>
+                            <div class="skill-tag"><i class="fas fa-laptop"></i> Digital Learning Tools</div>
+                            <div class="skill-tag"><i class="fas fa-handshake"></i> Parent-Teacher Coordination</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2024 - February 2025</div>
+                        <h3 class="timeline-title">Junior Lecturer in Physics</h3>
+                        <div class="timeline-company">Sri Chaitanya Junior College, Bengaluru, Karnataka</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Managed academic labs for CBSE and PUC +2 students, ensuring a safe and effective learning environment</li>
+                                <li>Assisted in preparing accurate and fair question paper keys under senior faculty guidance</li>
+                                <li>Evaluated examination papers and provided constructive feedback to students</li>
+                                <li>Coordinated with parents to communicate student progress effectively</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2022</div>
+                        <h3 class="timeline-title">Junior Lecturer in Physics</h3>
+                        <div class="timeline-company">Vignana Bharathi Junior College, Nellore, Andhra Pradesh</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Supervised study hours to maintain a disciplined learning environment</li>
+                                <li>Conducted exams with strict invigilation to ensure fairness</li>
+                                <li>Maintained student attendance and academic performance records</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section with 10th Class Details -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-degree">M.Sc. Physics</h3>
+                        <div class="education-school">Vikrama Simhapuri University</div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2020 - 2022</span>
+                            <span><i class="fas fa-graduation-cap"></i> 60%</span>
+                        </div>
+                        <div class="education-desc">
+                            <p>Specialized in advanced physics concepts with practical laboratory experience.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-degree">B.Sc. Computer Science</h3>
+                        <div class="education-school">Krishna Chaitanya Degree & PG College</div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2016 - 2019</span>
+                            <span><i class="fas fa-graduation-cap"></i> 80%</span>
+                        </div>
+                        <div class="education-desc">
+                            <p>Combined study of computer science fundamentals with programming skills.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-degree">Intermediate (10+2)</h3>
+                        <div class="education-school">G.M.N & N.V.K.R Govt JR College</div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2014 - 2016</span>
+                            <span><i class="fas fa-graduation-cap"></i> 80.1%</span>
+                        </div>
+                        <div class="education-desc">
+                            <p>Completed with focus on science and mathematics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-degree">Secondary School (10th)</h3>
+                        <div class="education-school">Z.P. High School, Inamadugu</div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2013 - 2014</span>
+                            <span><i class="fas fa-graduation-cap"></i> 7.7 CGPA</span>
+                        </div>
+                        <div class="education-desc">
+                            <p>Completed secondary education with distinction in science subjects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Slideshow Section -->
+    <section class="slideshow" id="slideshow">
+        <div class="container">
+            <div class="section-title">
+                <h2>Teaching Gallery</h2>
+            </div>
+            
+            <div class="slideshow-container">
+                <!-- Slide 1 - Replace with your actual images -->
+                <div class="slide fade">
+                    <img src="./assets/lab_0.jpg" alt="Physics Lab Demonstration">
+                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide fade">
+                    <img src="./assets/invislation_1.jpg" alt="Classroom Teaching">
+                    <div class="slide-caption">Engaging classroom lecture on fundamental physics concepts</div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide fade">
+                    <img src="./assets/lab_1.jpg" alt="Student Interaction">
+                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="slide fade">
+                    <img src="./assets/lab_2.jpg" alt="Academic Event">
+                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                </div>
+                 <!-- Slide 5 -->
+                 <div class="slide fade">
+                    <img src="./assets/lab_3.jpg" alt="Academic Event">
+                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="slide fade">
+                    <img src="./assets/lab_4.jpg" alt="Academic Event">
+                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Contact Section -->
+    <section class="whatsapp-contact" id="contact">
+        <div class="container">
+            <div class="whatsapp-box">
+                <div class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Contact Me Directly on WhatsApp</h3>
+                <p>Feel free to message me for any inquiries or opportunities</p>
+                <a href="https://wa.me/919345567899" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Penchalaiah</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#education">Education</a>
+                    <a href="#slideshow">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2024 Penchalaiah Ponnaluru. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Slideshow functionality
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+        
+        // Auto slide change every 5 seconds
+        setInterval(() => {
+            plusSlides(1);
+        }, 5000);
+    </script>
+</body>
+</html>
