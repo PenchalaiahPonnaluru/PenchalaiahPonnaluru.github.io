@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penchalaiah Ponnaluru | Physics Educator</title>
+    <meta name="description" content="Penchalaiah Ponnaluru - Physics Lab Instructor & Educator specializing in CBSE/PUC +2 Physics practicals, lab management, and student performance analysis.">
+    <meta name="keywords" content="Physics Lab Instructor, Physics Teacher, CBSE Physics, PUC Physics, Sri Chaitanya, Science Educator, Bangalore, Physics Practicals">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Penchalaiah Ponnaluru | Physics Lab Instructor">
+    <meta property="og:description" content="Physics Lab Instructor with 2+ years of experience in CBSE/PUC +2 Physics practicals and student performance analysis">
+    <meta property="og:type" content="website">
+    
+    <title>Penchalaiah Ponnaluru | Physics Lab Instructor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary: #3498db;
@@ -16,6 +25,7 @@
             --text: #333;
             --gray: #95a5a6;
             --whatsapp: #25D366;
+            --success: #27ae60;
         }
         
         * {
@@ -23,6 +33,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
@@ -99,6 +113,16 @@
         .btn-whatsapp:hover {
             background: transparent;
             color: var(--whatsapp);
+        }
+        
+        .btn-github {
+            background: #333;
+            border-color: #333;
+        }
+        
+        .btn-github:hover {
+            background: transparent;
+            color: #333;
         }
         
         .btn:hover {
@@ -223,33 +247,63 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('physics-background.jpg') no-repeat center center/cover;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             text-align: center;
             padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             line-height: 1.2;
+            animation: fadeInUp 1s ease;
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
         }
         
         .hero-buttons {
             display: flex;
             gap: 15px;
             justify-content: center;
+            animation: fadeInUp 1s ease 0.4s both;
+            flex-wrap: wrap;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* About Section with Circular Image */
@@ -295,6 +349,16 @@
             color: var(--text);
         }
         
+        .philosophy-box {
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--secondary);
+        }
+        
         .skills {
             margin-top: 30px;
         }
@@ -330,9 +394,110 @@
             transform: translateY(-3px);
         }
         
+        /* Projects Section - NEW */
+        .projects {
+            background: var(--light);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-header {
+            background: var(--secondary);
+            color: white;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .project-subtitle {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .project-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-desc {
+            margin-bottom: 20px;
+            color: var(--text);
+            flex-grow: 1;
+        }
+        
+        .project-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .project-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .project-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .project-features i {
+            color: var(--success);
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .project-link:hover {
+            color: var(--accent);
+            gap: 12px;
+        }
+        
         /* Experience Section */
         .experience {
-            background: var(--light);
+            background: white;
         }
         
         .timeline {
@@ -370,7 +535,7 @@
         
         .timeline-content {
             padding: 20px;
-            background: white;
+            background: var(--light);
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             position: relative;
@@ -381,7 +546,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: white;
+            background: var(--light);
             top: 30px;
             transform: rotate(45deg);
             box-shadow: 5px -5px 10px rgba(0,0,0,0.1);
@@ -444,7 +609,7 @@
         
         /* Education Section */
         .education {
-            background: white;
+            background: var(--light);
         }
         
         .education-grid {
@@ -454,7 +619,7 @@
         }
         
         .education-card {
-            background: var(--light);
+            background: white;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -499,7 +664,7 @@
         
         /* Image Slideshow Section */
         .slideshow {
-            background: var(--light);
+            background: white;
         }
         
         .slideshow-container {
@@ -660,6 +825,10 @@
                 justify-content: center;
             }
             
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .timeline::before {
                 left: 40px;
             }
@@ -752,6 +921,10 @@
             .slide img {
                 height: 300px;
             }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 480px) {
@@ -777,26 +950,26 @@
         <div class="container">
             <div class="header-container">
                 <div class="profile-nav">
-                    <!-- Replace "profile-thumbnail.jpg" with your actual thumbnail photo -->
-                    <img src="./assets/pechalaiah.jpg" alt="Penchalaiah Ponnaluru" class="nav-profile-img">
+                    <img src="./assets/pechalaiah.jpg" alt="Penchalaiah Ponnaluru - Physics Lab Instructor" class="nav-profile-img" loading="eager">
                     <div class="logo">Penchalaiah Ponnaluru</div>
                 </div>
-                <nav id="nav">
+                <nav id="nav" aria-label="Main navigation">
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#education">Education</a></li>
                         <li><a href="#slideshow">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li>
-                            <a href="./assets/Penchalaiah Ponnaluru exp.pdf" download class="resume-download">
+                            <a href="./assets/Penchalaiah Ponnaluru exp.pdf" download class="resume-download" aria-label="Download Resume PDF">
                                 <i class="fas fa-download"></i> Resume
                             </a>
                         </li>
                     </ul>
                 </nav>
-                <div class="menu-toggle" id="menuToggle">
+                <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
@@ -807,10 +980,13 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Transforming Physics Education Through Innovative Teaching</h1>
-                <p>Passionate Physics Junior Lecturer with 1.5+ years of experience creating engaging learning environments for CBSE/PUC students</p>
+                <h1>Transforming Physics Education Through Practical Learning</h1>
+                <p>Physics Lab Instructor with 2+ years of experience in CBSE/PUC +2 Physics practicals, laboratory management, and student performance analysis at Sri Chaitanya Educational Institutions</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="https://penchalaiahponnaluru.github.io/sriChaithanyaSrPhyPraticals/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-flask"></i> Lab Resources
+                    </a>
                     <a href="./assets/Penchalaiah Ponnaluru exp.pdf" download class="btn btn-outline">
                         <i class="fas fa-download"></i> Download Resume
                     </a>
@@ -827,24 +1003,88 @@
             </div>
             <div class="about-grid">
                 <div class="about-img-container">
-                    <!-- Replace "profile.jpg" with your actual photo filename -->
-                    <img src="./assets/pechalaiah.jpg" alt="Penchalaiah Ponnaluru" class="about-img">
+                    <img src="./assets/pechalaiah.jpg" alt="Penchalaiah Ponnaluru conducting physics lab session" class="about-img" loading="lazy">
                 </div>
                 <div class="about-content">
-                    <h3>Dedicated Physics Educator</h3>
-                    <p>I am a passionate Junior Lecturer specializing in academic lab management, assessment preparation, and student engagement. Committed to creating dynamic learning environments that enhance student understanding of Physics concepts.</p>
-                    <p>My teaching philosophy emphasizes hands-on experimentation, real-world applications, and personalized mentorship to help students excel in CBSE and PUC +2 curricula.</p>
+                    <h3>Dedicated Physics Lab Instructor</h3>
+                    <p>I am a passionate Physics Lab Instructor specializing in CBSE and PUC +2 Physics practicals, laboratory management, and student engagement. With my M.Sc. in Physics (2022), I bring strong theoretical knowledge combined with hands-on experimental expertise.</p>
+                    
+                    <div class="philosophy-box">
+                        "I strongly believe that effective laboratory instruction plays a vital role in strengthening students' conceptual understanding and scientific thinking."
+                    </div>
+                    
+                    <p>My professional focus includes conducting senior secondary Physics laboratory sessions, ensuring laboratory safety, enhancing student engagement through concept-based practical learning, and comprehensive student performance analysis.</p>
                     
                     <div class="skills">
-                        <h4>Teaching Expertise</h4>
+                        <h4>Core Competencies</h4>
                         <div class="skill-tags">
-                            <div class="skill-tag"><i class="fas fa-chalkboard"></i> Curriculum Planning</div>
-                            <div class="skill-tag"><i class="fas fa-flask"></i> Lab Management</div>
-                            <div class="skill-tag"><i class="fas fa-check-circle"></i> Student Assessment</div>
-                            <div class="skill-tag"><i class="fas fa-users"></i> Interactive Lectures</div>
-                            <div class="skill-tag"><i class="fas fa-laptop"></i> Digital Learning Tools</div>
-                            <div class="skill-tag"><i class="fas fa-handshake"></i> Parent-Teacher Coordination</div>
+                            <div class="skill-tag"><i class="fas fa-flask"></i> Physics Practicals</div>
+                            <div class="skill-tag"><i class="fas fa-shield-alt"></i> Lab Safety Management</div>
+                            <div class="skill-tag"><i class="fas fa-chart-line"></i> Performance Analysis</div>
+                            <div class="skill-tag"><i class="fas fa-clipboard-check"></i> Assessment Design</div>
+                            <div class="skill-tag"><i class="fas fa-users"></i> Student Mentoring</div>
+                            <div class="skill-tag"><i class="fas fa-laptop-code"></i> Digital Learning Tools</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Results Analysis -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-chart-bar project-icon"></i>
+                        <div>
+                            <h3 class="project-title">Student Results & Performance Analysis</h3>
+                            <div class="project-subtitle">Data Visualization Platform</div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-desc">
+                            Comprehensive digital platform for tracking and analyzing student examination performance at Sri Chaitanya PU College. Features interactive result tracking for Pre-Board examinations and academic progress monitoring.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check-circle"></i> Pre-Board examination result tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Student performance analytics</li>
+                            <li><i class="fas fa-check-circle"></i> Academic progress visualization</li>
+                            <li><i class="fas fa-check-circle"></i> PU & CBSE College data integration</li>
+                        </ul>
+                        <a href="https://penchalaiahponnaluru.github.io/SCTSResults/" target="_blank" class="project-link" rel="noopener noreferrer">
+                            View Live Project <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Physics Practicals -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-atom project-icon"></i>
+                        <div>
+                            <h3 class="project-title">Senior Physics Practical Work</h3>
+                            <div class="project-subtitle">Digital Lab Notebook & Resources</div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-desc">
+                            Complete digital repository of CBSE Physics practical experiments and in-lab activities for +2 students. Includes detailed experiment procedures, circuit diagrams, and observation templates for comprehensive practical learning.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check-circle"></i> 8+ Core Physics Experiments with PDFs</li>
+                            <li><i class="fas fa-check-circle"></i> 6 In-Lab Activities with procedures</li>
+                            <li><i class="fas fa-check-circle"></i> Circuit diagrams and setup guides</li>
+                            <li><i class="fas fa-check-circle"></i> Reference records and templates</li>
+                        </ul>
+                        <a href="https://penchalaiahponnaluru.github.io/sriChaithanyaSrPhyPraticals/" target="_blank" class="project-link" rel="noopener noreferrer">
+                            View Live Project <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -860,18 +1100,20 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-icon">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-flask"></i>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-date">July 2024 - February 2025</div>
-                        <h3 class="timeline-title">Junior Lecturer in Physics</h3>
-                        <div class="timeline-company">Sri Chaitanya Junior College, Bengaluru, Karnataka</div>
+                        <div class="timeline-date">2022 - Present (2+ Years)</div>
+                        <h3 class="timeline-title">Physics Lab Instructor</h3>
+                        <div class="timeline-company">Sri Chaitanya Educational Institutions, Bengaluru, Karnataka</div>
                         <div class="timeline-desc">
                             <ul>
-                                <li>Managed academic labs for CBSE and PUC +2 students, ensuring a safe and effective learning environment</li>
-                                <li>Assisted in preparing accurate and fair question paper keys under senior faculty guidance</li>
-                                <li>Evaluated examination papers and provided constructive feedback to students</li>
-                                <li>Coordinated with parents to communicate student progress effectively</li>
+                                <li>Conducting and managing senior secondary Physics laboratory sessions for +2 students</li>
+                                <li>Ensuring laboratory safety protocols and proper handling of scientific instruments</li>
+                                <li>Enhancing student engagement through concept-based practical learning methodologies</li>
+                                <li>Question paper preparation and evaluation under senior lecturer guidance</li>
+                                <li>Handling study hours and providing comprehensive academic support to students</li>
+                                <li>Managing digital resources for practical experiments and student result analysis</li>
                             </ul>
                         </div>
                     </div>
@@ -898,7 +1140,7 @@
         </div>
     </section>
 
-    <!-- Education Section with 10th Class Details -->
+    <!-- Education Section -->
     <section class="education" id="education">
         <div class="container">
             <div class="section-title">
@@ -916,7 +1158,7 @@
                             <span><i class="fas fa-graduation-cap"></i> 60%</span>
                         </div>
                         <div class="education-desc">
-                            <p>Specialized in advanced physics concepts with practical laboratory experience.</p>
+                            <p>Specialized in advanced physics concepts with extensive practical laboratory experience and research methodology.</p>
                         </div>
                     </div>
                 </div>
@@ -932,7 +1174,7 @@
                             <span><i class="fas fa-graduation-cap"></i> 80%</span>
                         </div>
                         <div class="education-desc">
-                            <p>Combined study of computer science fundamentals with programming skills.</p>
+                            <p>Combined study of computer science fundamentals with programming skills, enabling digital education tools development.</p>
                         </div>
                     </div>
                 </div>
@@ -948,7 +1190,7 @@
                             <span><i class="fas fa-graduation-cap"></i> 80.1%</span>
                         </div>
                         <div class="education-desc">
-                            <p>Completed with focus on science and mathematics.</p>
+                            <p>Completed with focus on Physics, Chemistry, and Mathematics (PCM).</p>
                         </div>
                     </div>
                 </div>
@@ -980,51 +1222,47 @@
             </div>
             
             <div class="slideshow-container">
-                <!-- Slide 1 - Replace with your actual images -->
                 <div class="slide fade">
-                    <img src="./assets/lab_0.jpg" alt="Physics Lab Demonstration">
+                    <img src="./assets/lab_0.jpg" alt="Physics lab demonstration with students conducting Ohm's Law experiment" loading="lazy">
                     <div class="slide-caption">Conducting practical experiments in the physics lab</div>
                 </div>
                 
-                <!-- Slide 2 -->
                 <div class="slide fade">
-                    <img src="./assets/invislation_1.jpg" alt="Classroom Teaching">
+                    <img src="./assets/invislation_1.jpg" alt="Classroom teaching session on physics concepts" loading="lazy">
                     <div class="slide-caption">Engaging classroom lecture on fundamental physics concepts</div>
                 </div>
                 
-                <!-- Slide 3 -->
                 <div class="slide fade">
-                    <img src="./assets/lab_1.jpg" alt="Student Interaction">
-                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                    <img src="./assets/lab_1.jpg" alt="Student interaction during Meter Bridge experiment" loading="lazy">
+                    <div class="slide-caption">Guiding students through Meter Bridge experiments</div>
                 </div>
                 
-                <!-- Slide 4 -->
                 <div class="slide fade">
-                    <img src="./assets/lab_2.jpg" alt="Academic Event">
-                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
-                </div>
-                 <!-- Slide 5 -->
-                 <div class="slide fade">
-                    <img src="./assets/lab_3.jpg" alt="Academic Event">
-                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
-                </div>
-                <!-- Slide 6 -->
-                <div class="slide fade">
-                    <img src="./assets/lab_4.jpg" alt="Academic Event">
-                    <div class="slide-caption">Conducting practical experiments in the physics lab</div>
+                    <img src="./assets/lab_2.jpg" alt="Optics experiment demonstration" loading="lazy">
+                    <div class="slide-caption">Demonstrating optics experiments with prism and lenses</div>
                 </div>
                 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="slide fade">
+                    <img src="./assets/lab_3.jpg" alt="Semiconductor diode characteristics experiment" loading="lazy">
+                    <div class="slide-caption">Teaching semiconductor device characteristics</div>
+                </div>
+                
+                <div class="slide fade">
+                    <img src="./assets/lab_4.jpg" alt="Student performing circuit assembly" loading="lazy">
+                    <div class="slide-caption">Supervising circuit assembly activities</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</a>
             </div>
             
             <div class="dots-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(1)" aria-label="Go to slide 1"></span>
+                <span class="dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></span>
+                <span class="dot" onclick="currentSlide(3)" aria-label="Go to slide 3"></span>
+                <span class="dot" onclick="currentSlide(4)" aria-label="Go to slide 4"></span>
+                <span class="dot" onclick="currentSlide(5)" aria-label="Go to slide 5"></span>
+                <span class="dot" onclick="currentSlide(6)" aria-label="Go to slide 6"></span>
             </div>
         </div>
     </section>
@@ -1037,8 +1275,8 @@
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <h3>Contact Me Directly on WhatsApp</h3>
-                <p>Feel free to message me for any inquiries or opportunities</p>
-                <a href="https://wa.me/919347499547" class="btn btn-whatsapp">
+                <p>Feel free to message me for any inquiries, collaboration opportunities, or physics practical resources</p>
+                <a href="https://wa.me/919347499547" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                 </a>
             </div>
@@ -1053,6 +1291,7 @@
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
                     <a href="#education">Education</a>
                     <a href="#slideshow">Gallery</a>
@@ -1094,21 +1333,6 @@
             }
         });
         
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
         // Slideshow functionality
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -1142,9 +1366,28 @@
         }
         
         // Auto slide change every 5 seconds
-        setInterval(() => {
+        let slideInterval = setInterval(() => {
             plusSlides(1);
         }, 5000);
+        
+        // Pause slideshow on hover
+        const slideshowContainer = document.querySelector('.slideshow-container');
+        
+        slideshowContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slideshowContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                plusSlides(1);
+            }, 5000);
+        });
+        
+        // Keyboard navigation for slideshow
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') plusSlides(-1);
+            if (e.key === 'ArrowRight') plusSlides(1);
+        });
     </script>
 </body>
 </html>
